@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="1156.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attraction.analyzer.DashbordController">
+   <children>
+      <ButtonBar layoutX="591.0" layoutY="33.0" prefHeight="66.0" prefWidth="541.0">
+        <buttons>
+          <Button id="fact1" fx:id="btn_1" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#CalculateFact1" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: f0931c;" text="Fact 1" textAlignment="RIGHT">
+               <font>
+                  <Font name="Calibri" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8199999928474426" green="0.02459999918937683" blue="0.02459999918937683" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.21052631735801697" green="0.17641325294971466" blue="0.17641325294971466" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <InnerShadow choke="0.07" height="26.93" radius="30.015" width="95.13">
+                     <color>
+                        <Color red="0.25" green="0.08449073880910873" blue="0.08449073880910873" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+            <Button id="fact1" fx:id="btn_2" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="364.0" layoutY="15.0" mnemonicParsing="false" onAction="#CalculateFact2" prefHeight="56.0" prefWidth="118.0" style="-fx-background-color: f0931c;" text="Fact 2" textAlignment="RIGHT">
+               <font>
+                  <Font name="Calibri" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8199999928474426" green="0.02459999918937683" blue="0.02459999918937683" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.21052631735801697" green="0.17641325294971466" blue="0.17641325294971466" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <InnerShadow choke="0.07" height="26.93" radius="30.015" width="95.13">
+                     <color>
+                        <Color red="0.25" green="0.08449073880910873" blue="0.08449073880910873" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+            <Button id="fact1" fx:id="btn_3" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="364.0" layoutY="15.0" mnemonicParsing="false" onAction="#CalculateFact3" prefHeight="56.0" prefWidth="118.0" style="-fx-background-color: f0931c;" text="Fact 3" textAlignment="RIGHT">
+               <font>
+                  <Font name="Calibri" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8199999928474426" green="0.02459999918937683" blue="0.02459999918937683" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.21052631735801697" green="0.17641325294971466" blue="0.17641325294971466" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <InnerShadow choke="0.07" height="26.93" radius="30.015" width="95.13">
+                     <color>
+                        <Color red="0.25" green="0.08449073880910873" blue="0.08449073880910873" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+        </buttons>
+      </ButtonBar>
+      <TextField fx:id="tx_region" layoutX="390.0" layoutY="43.0" onKeyPressed="#searchByRegion" prefHeight="45.0" prefWidth="149.0" promptText="Search By Reagoin " />
+      <TextField fx:id="tx_tag" layoutX="24.0" layoutY="43.0" onKeyPressed="#searchByTag" prefHeight="45.0" prefWidth="149.0" promptText="Search By Tag" />
+      <TextField fx:id="tx_name" layoutX="200.0" layoutY="43.0" onInputMethodTextChanged="#searchByName" onKeyPressed="#searchByName" prefHeight="45.0" prefWidth="149.0" promptText="Search By Name" />
+      <TableView fx:id="Tb_view" layoutX="11.0" layoutY="126.0" prefHeight="420.0" prefWidth="1129.0">
+        <columns>
+          <TableColumn fx:id="f_name" prefWidth="93.0" text="Name" />
+          <TableColumn fx:id="f_url" prefWidth="146.0" text="Url" />
+            <TableColumn fx:id="f_telephone" prefWidth="98.0" text="Telephone" />
+            <TableColumn fx:id="f_long" minWidth="3.0" prefWidth="68.0" text="Longitude" />
+            <TableColumn fx:id="f_lat" prefWidth="67.0" text="Latitude" />
+            <TableColumn fx:id="f_region" prefWidth="108.0" text="AdressRegion" />
+            <TableColumn fx:id="f_local" prefWidth="106.0" text="AddressLocality" />
+            <TableColumn fx:id="f_country" prefWidth="142.0" text="AddressCountry" />
+            <TableColumn fx:id="f_tag" prefWidth="300.0" text="Tags" />
+        </columns>
+         <effect>
+            <Blend>
+               <topInput>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </topInput>
+            </Blend>
+         </effect>
+      </TableView>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

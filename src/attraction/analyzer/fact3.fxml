@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="915.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="attraction.analyzer.Fact3Controller">
+   <children>
+      <AreaChart fx:id="area" layoutY="9.0" prefHeight="503.0" prefWidth="444.0" title="Visited Places">
+        <xAxis>
+          <CategoryAxis label="places" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Popularity" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <ScatterChart fx:id="scat" layoutX="444.0" layoutY="3.0" prefHeight="510.0" prefWidth="475.0" title="Visited places">
+        <xAxis>
+          <CategoryAxis label="Places" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Popularity" side="LEFT" />
+        </yAxis>
+      </ScatterChart>
+   </children>
+</AnchorPane>

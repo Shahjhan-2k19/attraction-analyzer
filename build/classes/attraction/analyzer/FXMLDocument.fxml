@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="508.0" prefWidth="733.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attraction.analyzer.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="735.0" layoutX="22.0" layoutY="-43.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="20.0" layoutY="43.0" onMouseClicked="#handleButtonAction" prefHeight="422.0" prefWidth="706.0" style="-fx-background-color: #9c2827;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="98.0" prefWidth="718.0" text="Welcome To Attraction Analyser" textAlignment="JUSTIFY" textFill="#c6cbcd" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnstart" layoutX="264.0" layoutY="321.0" mnemonicParsing="false" onAction="#bt_load" prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: black;" text="Start" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5571428571428572" endY="1.0" startX="0.5571428571428572" startY="0.21428571428571427">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8947368264198303" green="0.6917641162872314" blue="0.6917641162872314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.07003199431212227">
+                           <color>
+                              <Color red="0.8157894611358643" green="0.26059940457344055" blue="0.26059940457344055" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.210727969348659">
+                           <color>
+                              <Color red="0.9736841917037964" green="0.031554579734802246" blue="0.031554579734802246" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7128806730655288">
+                           <color>
+                              <Color red="1.0" green="0.029999999329447746" blue="0.029999999329447746" opacity="0.7952173948287964" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8850574712643676">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7894737124443054" green="0.036549706012010574" blue="0.036549706012010574" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Reflection bottomOpacity="0.31" topOpacity="0.13">
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </Reflection>
+               </effect>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="80.0" prefHeight="248.0" prefWidth="618.0" text="The Attractions data set consists of a collection of Tourist Attractions&#10;. Fáilte Ireland provide this data as part of their Open Data and Open&#10; Data Plus APIs. Used data set is available on follwing link.&#10;https://data.gov.ie/dataset/attractions&#10;This tool perform analysis on dataset and find intresting facts.">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5571428571428572" endY="1.0" startX="0.5571428571428572" startY="0.21428571428571427">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.12719298899173737" green="0.8380116820335388" blue="0.9473684430122375" opacity="0.800000011920929" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.08429118773946355">
+                           <color>
+                              <Color red="0.12719298899173737" green="0.8380116820335388" blue="0.9473684430122375" opacity="0.800000011920929" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.19923371647509536">
+                           <color>
+                              <Color red="0.2558479607105255" green="0.1535087674856186" blue="0.9210526347160339" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.28352490421455917">
+                           <color>
+                              <Color red="0.2486395388841629" green="0.1737329363822937" blue="0.8157894611358643" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.3869731800766281">
+                           <color>
+                              <Color red="0.25127923488616943" green="0.12061403691768646" blue="0.7236841917037964" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.49559584468933915">
+                           <color>
+                              <Color red="0.36841294169425964" green="0.13060428202152252" blue="0.8815789222717285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5949362088715087">
+                           <color>
+                              <Color red="0.3187134563922882" green="0.3187134563922882" blue="0.6315789222717285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7049808429118768">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7809772089900063">
+                           <color>
+                              <Color red="0.21978557109832764" green="0.5250731110572815" blue="0.5789473652839661" opacity="0.800000011920929" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8429118773946358">
+                           <color>
+                              <Color red="0.6010416746139526" green="0.34375" blue="0.75" opacity="0.800000011920929" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9283090413556103">
+                           <color>
+                              <Color red="0.5563302040100098" green="0.442190557718277" blue="0.8026315569877625" opacity="0.800000011920929" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9810799067820037">
+                           <color>
+                              <Color red="0.12235217541456223" green="0.07846003770828247" blue="0.7368420958518982" opacity="0.800000011920929" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.12235217541456223" green="0.07846003770828247" blue="0.7368420958518982" opacity="0.800000011920929" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

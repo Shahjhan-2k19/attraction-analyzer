@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attraction.analyzer.Fact1Controller">
+   <children>
+      <BarChart fx:id="places" layoutX="50.0" layoutY="42.0" prefHeight="480.0" prefWidth="610.0" title="Places in ireland">
+        <xAxis>
+          <CategoryAxis fx:id="y" label="Places" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="No Of Existance" side="LEFT" fx:id="x" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>
