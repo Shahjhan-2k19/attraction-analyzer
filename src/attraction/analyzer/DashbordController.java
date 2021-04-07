@@ -85,8 +85,69 @@ public class DashbordController implements Initializable {
     
  
 
-   
-    
+    @FXML
+    private void CalculateFact1(ActionEvent event) {
+        try{
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = FXMLLoader.load(getClass().getResource("Fact1.fxml"));
+            stage.setScene(new Scene(root));        
+            stage.showAndWait();
+       }
+       catch ( IOException e)
+       {
+           e.printStackTrace();
+       }
+    }
+
+    @FXML
+    private void CalculateFact2(ActionEvent event) {
+        try{
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = FXMLLoader.load(getClass().getResource("fact2.fxml"));
+            stage.setScene(new Scene(root));        
+            stage.showAndWait();
+       }
+       catch ( IOException e)
+       {
+           e.printStackTrace();
+       }
+    }
+
+    @FXML
+    private void CalculateFact3(ActionEvent event) {
+        try{
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = FXMLLoader.load(getClass().getResource("fact3.fxml"));
+            stage.setScene(new Scene(root));        
+            stage.showAndWait();
+       }
+       catch ( IOException e)
+       {
+           e.printStackTrace();
+       }
+    }
+
+    @FXML
+    private void CalculateFact4(ActionEvent event) {
+        try{
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = FXMLLoader.load(getClass().getResource("fact4.fxml"));
+            stage.setScene(new Scene(root));        
+            stage.showAndWait();
+       }
+       catch ( IOException e)
+       {
+           e.printStackTrace();
+       }
+    }
+
+    @FXML
+    private void searchByName(InputMethodEvent event) {
+    }
 
   
 }
