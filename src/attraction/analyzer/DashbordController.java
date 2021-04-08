@@ -65,7 +65,7 @@ public class DashbordController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    
+      this.ShowRecord();
     }  
     public Connection getConnnection()
     {
@@ -82,8 +82,170 @@ public class DashbordController implements Initializable {
         }
     }
 
-    
- 
+    public ObservableList<ViewHelper> getRecordList()
+    {
+        ObservableList<ViewHelper> ls= FXCollections.observableArrayList();
+        Connection conn= this.getConnnection();
+        String query = "Select * from attractions ";
+        Statement st ;
+        ResultSet rs;
+        try {
+            st= conn.createStatement();
+            rs = st.executeQuery(query);
+            ViewHelper hp;
+            while(rs.next())
+            {
+                hp = new ViewHelper(rs.getString("Name"),rs.getString("Url"),rs.getString("Telephone"),rs.getString("Longitude"),rs.getString("Latitude"),rs.getString("AddressRegion"),rs.getString("AddressLocality"),rs.getString("AddressCountry"),rs.getString("Tags"));
+                ls.add(hp);
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return ls;
+    }
+    public void ShowRecord()
+    {
+        ObservableList<ViewHelper> list =  this.getRecordList();
+        f_name.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Name"));
+        f_url.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Url"));
+        f_telephone.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Telephone"));
+        f_lat.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("latitude"));
+        f_long.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("longitude"));
+        f_region.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Region"));
+        f_local.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Local"));
+        f_country.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Country"));
+        f_tag.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Tags"));
+        Tb_view.setItems(list);
+    }
+public ObservableList<ViewHelper> getNameRecordList(String txt)
+    {
+        ObservableList<ViewHelper> ls= FXCollections.observableArrayList();
+        Connection conn= this.getConnnection();
+        String query = "Select * from attractions where Name like \"%"+txt+"%\"";
+        Statement st ;
+        ResultSet rs;
+        try {
+            st= conn.createStatement();
+            rs = st.executeQuery(query);
+            ViewHelper hp;
+            while(rs.next())
+            {
+                hp = new ViewHelper(rs.getString("Name"),rs.getString("Url"),rs.getString("Telephone"),rs.getString("Longitude"),rs.getString("Latitude"),rs.getString("AddressRegion"),rs.getString("AddressLocality"),rs.getString("AddressCountry"),rs.getString("Tags"));
+                ls.add(hp);
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return ls;
+    }
+    public void ShowNameRecord(String txt)
+    {
+        ObservableList<ViewHelper> list =  this.getNameRecordList(txt);
+        f_name.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Name"));
+        f_url.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Url"));
+        f_telephone.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Telephone"));
+        f_lat.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("latitude"));
+        f_long.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("longitude"));
+        f_region.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Region"));
+        f_local.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Local"));
+        f_country.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Country"));
+        f_tag.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Tags"));
+        Tb_view.setItems(list);
+    }
+    public ObservableList<ViewHelper> getRegionRecordList(String txt)
+    {
+        ObservableList<ViewHelper> ls= FXCollections.observableArrayList();
+        Connection conn= this.getConnnection();
+        String query = "Select * from attractions where AddressRegion like \"%"+txt+"%\"";
+        Statement st ;
+        ResultSet rs;
+        try {
+            st= conn.createStatement();
+            rs = st.executeQuery(query);
+            ViewHelper hp;
+            while(rs.next())
+            {
+                hp = new ViewHelper(rs.getString("Name"),rs.getString("Url"),rs.getString("Telephone"),rs.getString("Longitude"),rs.getString("Latitude"),rs.getString("AddressRegion"),rs.getString("AddressLocality"),rs.getString("AddressCountry"),rs.getString("Tags"));
+                ls.add(hp);
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return ls;
+    }
+    public void ShowRegionRecord(String txt)
+    {
+        ObservableList<ViewHelper> list =  this.getRegionRecordList(txt);
+        f_name.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Name"));
+        f_url.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Url"));
+        f_telephone.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Telephone"));
+        f_lat.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("latitude"));
+        f_long.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("longitude"));
+        f_region.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Region"));
+        f_local.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Local"));
+        f_country.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Country"));
+        f_tag.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Tags"));
+        Tb_view.setItems(list);
+    }
+    public ObservableList<ViewHelper> getTagRecordList(String txt)
+    {
+        ObservableList<ViewHelper> ls= FXCollections.observableArrayList();
+        Connection conn= this.getConnnection();
+        String query = "Select * from attractions where Tags like \"%"+txt+"%\"";
+        Statement st ;
+        ResultSet rs;
+        try {
+            st= conn.createStatement();
+            rs = st.executeQuery(query);
+            ViewHelper hp;
+            while(rs.next())
+            {
+                hp = new ViewHelper(rs.getString("Name"),rs.getString("Url"),rs.getString("Telephone"),rs.getString("Longitude"),rs.getString("Latitude"),rs.getString("AddressRegion"),rs.getString("AddressLocality"),rs.getString("AddressCountry"),rs.getString("Tags"));
+                ls.add(hp);
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return ls;
+    }
+    public void ShowTagRecord(String txt)
+    {
+        ObservableList<ViewHelper> list =  this.getTagRecordList(txt);
+        f_name.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Name"));
+        f_url.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Url"));
+        f_telephone.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Telephone"));
+        f_lat.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("latitude"));
+        f_long.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("longitude"));
+        f_region.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Region"));
+        f_local.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Local"));
+        f_country.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Country"));
+        f_tag.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Tags"));
+        Tb_view.setItems(list);
+    }
+    @FXML
+    private void searchByName(KeyEvent event) {
+        this.ShowNameRecord(tx_name.getText());
+        
+    }
+
+    @FXML
+    private void searchByRegion(KeyEvent event) {
+        this.ShowRegionRecord(tx_region.getText());
+        
+    }
+
+    @FXML
+    private void searchByTag(KeyEvent event) {
+        this.ShowTagRecord(tx_tag.getText());
+    }
 
     @FXML
     private void CalculateFact1(ActionEvent event) {
