@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="dist/Attraction Analyzer.jar"/>
+	<classpathentry kind="lib" path="dist/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="dist/run1517795887/Attraction Analyzer.jar"/>
+	<classpathentry kind="lib" path="dist/run1517795887/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="dist/run1676945528/Attraction Analyzer.jar"/>
+	<classpathentry kind="lib" path="dist/run1676945528/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="dist/run1777448812/Attraction Analyzer.jar"/>
+	<classpathentry kind="lib" path="dist/run1777448812/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="dist/run1806594790/Attraction Analyzer.jar"/>
+	<classpathentry kind="lib" path="dist/run1806594790/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="dist/run1845876017/Attraction Analyzer.jar"/>
+	<classpathentry kind="lib" path="dist/run1845876017/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="dist/run1995608602/Attraction Analyzer.jar"/>
+	<classpathentry kind="lib" path="dist/run1995608602/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="dist/run217392954/Attraction Analyzer.jar"/>
+	<classpathentry kind="lib" path="dist/run217392954/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

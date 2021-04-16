@@ -17,7 +17,7 @@
       <ImageView fitHeight="550.0" fitWidth="735.0" layoutX="22.0" layoutY="-43.0" pickOnBounds="true" preserveRatio="true" />
       <AnchorPane layoutX="20.0" layoutY="43.0" onMouseClicked="#handleButtonAction" prefHeight="422.0" prefWidth="706.0" style="-fx-background-color: #9c2827;">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="98.0" prefWidth="718.0" text="Welcome To Attraction Analyser" textAlignment="JUSTIFY" textFill="#c6cbcd" textOverrun="CENTER_ELLIPSIS">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="98.0" prefWidth="718.0" text="Welcome To Data Explorer." textAlignment="JUSTIFY" textFill="#c6cbcd" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font name="Calibri Bold" size="32.0" />
                </font>
@@ -70,7 +70,7 @@
                   </Reflection>
                </effect>
             </Button>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="80.0" prefHeight="248.0" prefWidth="618.0" text="The Attractions data set consists of a collection of Tourist Attractions&#10;. Fáilte Ireland provide this data as part of their Open Data and Open&#10; Data Plus APIs. Used data set is available on follwing link.&#10;https://data.gov.ie/dataset/attractions&#10;This tool perform analysis on dataset and find intresting facts.">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="80.0" prefHeight="248.0" prefWidth="618.0" text="Author: D17129735@mytudublin.ie.&#10; The Attractions data set consists of a collection of Tourist Attractions.&#10; Fáilte Ireland provide this data as part of their Open Data and Open&#10; Data Plus APIs. Used data set is available on follwing link.&#10;https://data.gov.ie/dataset/attractions&#10;This tool perform analysis on dataset and find intresting facts.">
                <font>
                   <Font size="17.0" />
                </font>
