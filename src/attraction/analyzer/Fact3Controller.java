@@ -1,3 +1,6 @@
+/*
+ * Fact 3 chart based on 6 pre writen places query
+ */
 
 package attraction.analyzer;
 

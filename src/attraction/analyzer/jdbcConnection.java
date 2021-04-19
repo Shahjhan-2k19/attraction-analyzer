@@ -1,3 +1,7 @@
+/*
+ * 
+ *
+ */
 
 package attraction.analyzer;
 import java.sql.*; 

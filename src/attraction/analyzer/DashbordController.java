@@ -1,3 +1,8 @@
+/* #3 control (used clear names for everything, its easy to follow)
+ * dashboard controller controls buttons text field and tables 
+ * FUNCTION call based on which text field has been used 
+ */
+
 package attraction.analyzer;
 import attraction.analyzer.ViewHelper;
 import attraction.analyzer.jdbcConnection;
@@ -27,7 +32,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class DashbordController implements Initializable {
-
+// initilizing buttons, Text Fields and Data Table
     @FXML
     private Button btn_1;
     @FXML
@@ -63,12 +68,13 @@ public class DashbordController implements Initializable {
     @FXML
     private TableColumn<ViewHelper, String> f_tag;
     
+   //work starting from here and calling show record, and show record calling obserablelist
     @Override
     public void initialize(URL url, ResourceBundle rb) {
       this.ShowRecord();
     }  
     public Connection getConnnection()
-    {
+    {   //function to build connection with database.and return connection variable
         Connection conn;
         try{
             conn = DriverManager.getConnection(  
@@ -81,11 +87,13 @@ public class DashbordController implements Initializable {
             return null;
         }
     }
-
+    //observation list to load data and save all requird data in main table observationlist
     public ObservableList<ViewHelper> getRecordList()
     {
         ObservableList<ViewHelper> ls= FXCollections.observableArrayList();
+        //because getting data from database. so it will return query with result 
         Connection conn= this.getConnnection();
+        //fetch all data
         String query = "Select * from attractions ";
         Statement st ;
         ResultSet rs;
@@ -105,6 +113,7 @@ public class DashbordController implements Initializable {
         }
         return ls;
     }
+    //showing over all data into list
     public void ShowRecord()
     {
         ObservableList<ViewHelper> list =  this.getRecordList();
@@ -119,7 +128,8 @@ public class DashbordController implements Initializable {
         f_tag.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Tags"));
         Tb_view.setItems(list);
     }
-public ObservableList<ViewHelper> getNameRecordList(String txt)
+    //building Search query By Name   
+    public ObservableList<ViewHelper> getNameRecordList(String txt)
     {
         ObservableList<ViewHelper> ls= FXCollections.observableArrayList();
         Connection conn= this.getConnnection();
@@ -142,6 +152,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
         }
         return ls;
     }
+    //show record searched my name 
     public void ShowNameRecord(String txt)
     {
         ObservableList<ViewHelper> list =  this.getNameRecordList(txt);
@@ -156,6 +167,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
         f_tag.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Tags"));
         Tb_view.setItems(list);
     }
+    //building Search query By Region 
     public ObservableList<ViewHelper> getRegionRecordList(String txt)
     {
         ObservableList<ViewHelper> ls= FXCollections.observableArrayList();
@@ -179,6 +191,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
         }
         return ls;
     }
+    //show record searched my Region
     public void ShowRegionRecord(String txt)
     {
         ObservableList<ViewHelper> list =  this.getRegionRecordList(txt);
@@ -193,10 +206,12 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
         f_tag.setCellValueFactory(new PropertyValueFactory<ViewHelper,String>("Tags"));
         Tb_view.setItems(list);
     }
+    //building Search query By Tag
     public ObservableList<ViewHelper> getTagRecordList(String txt)
     {
         ObservableList<ViewHelper> ls= FXCollections.observableArrayList();
         Connection conn= this.getConnnection();
+        //function on every key press. (detect which key has been pressed in which field)
         String query = "Select * from attractions where Tags like \"%"+txt+"%\"";
         Statement st ;
         ResultSet rs;
@@ -216,6 +231,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
         }
         return ls;
     }
+    //show record searched my Tag
     public void ShowTagRecord(String txt)
     {
         ObservableList<ViewHelper> list =  this.getTagRecordList(txt);
@@ -246,7 +262,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
     private void searchByTag(KeyEvent event) {
         this.ShowTagRecord(tx_tag.getText());
     }
-
+    //while press 1rd button event calculate and show new page with fact figure 1
     @FXML
     private void CalculateFact1(ActionEvent event) {
         try{
@@ -261,7 +277,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
            e.printStackTrace();
        }
     }
-
+    //while press 2rd button event calculate and show new page with fact figure 2
     @FXML
     private void CalculateFact2(ActionEvent event) {
         try{
@@ -276,7 +292,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
            e.printStackTrace();
        }
     }
-
+    //while press 3rd button event calculate and show new page with fact figure 3
     @FXML
     private void CalculateFact3(ActionEvent event) {
         try{
@@ -291,7 +307,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
            e.printStackTrace();
        }
     }
-
+    //while press 3rd button event calculate and show new page with fact 4 figure
     @FXML
     private void CalculateFact4(ActionEvent event) {
         try{
@@ -306,7 +322,7 @@ public ObservableList<ViewHelper> getNameRecordList(String txt)
            e.printStackTrace();
        }
     }
-
+    //input method
     @FXML
     private void searchByName(InputMethodEvent event) {
     }

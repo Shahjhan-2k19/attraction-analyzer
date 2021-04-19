@@ -1,3 +1,7 @@
+/*
+ * Bar chart Fact 1 chart based on 6 places pre writen queries
+ * BarChart, CategoryAxis and NumberAxis 
+ */
 
 package attraction.analyzer;
 
@@ -26,8 +30,9 @@ public class Fact1Controller implements Initializable {
     private CategoryAxis y;
     @FXML
     private NumberAxis x;
+    //building connection with data
 public Connection getConnnection()
-    {
+    {   
         Connection conn;
         try{
             conn = DriverManager.getConnection(  

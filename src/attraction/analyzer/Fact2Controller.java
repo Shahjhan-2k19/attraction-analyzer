@@ -1,3 +1,6 @@
+/*
+ * Fact 2 chart based on 6 region pre writen queries
+ */
 
 package attraction.analyzer;
 

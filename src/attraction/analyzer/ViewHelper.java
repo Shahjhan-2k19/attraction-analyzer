@@ -1,3 +1,8 @@
+/* #4 controller helper to get data
+ * this class is used to get all the required informaion
+ * creating variables for required field
+ * return and set all the data into data catagory variables 
+ */
 
 package attraction.analyzer;
 import java.util.*;
@@ -14,7 +19,7 @@ public class ViewHelper {
         this.latitude = latitude;
         this.longitude = longitude;
     }
-
+    //getters
     public String getName() {
         return Name;
     }

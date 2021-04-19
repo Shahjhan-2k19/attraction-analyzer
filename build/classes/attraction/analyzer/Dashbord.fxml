@@ -106,7 +106,7 @@
             </Button>
         </buttons>
       </ButtonBar>
-      <TextField fx:id="tx_region" layoutX="390.0" layoutY="43.0" onKeyPressed="#searchByRegion" prefHeight="45.0" prefWidth="149.0" promptText="Search By Reagoin " />
+      <TextField fx:id="tx_region" layoutX="390.0" layoutY="43.0" onKeyPressed="#searchByRegion" prefHeight="45.0" prefWidth="149.0" promptText="Search By Region " />
       <TextField fx:id="tx_tag" layoutX="24.0" layoutY="43.0" onKeyPressed="#searchByTag" prefHeight="45.0" prefWidth="149.0" promptText="Search By Tag" />
       <TextField fx:id="tx_name" layoutX="200.0" layoutY="43.0" onInputMethodTextChanged="#searchByName" onKeyPressed="#searchByName" prefHeight="45.0" prefWidth="149.0" promptText="Search By Name" />
       <TableView fx:id="Tb_view" layoutX="11.0" layoutY="126.0" prefHeight="420.0" prefWidth="1129.0">
