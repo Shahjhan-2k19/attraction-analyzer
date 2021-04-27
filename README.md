@@ -43,9 +43,10 @@ Designer file for Fact 3  (Most visited places based on popularity)
 
 Description of Core Functionalities:
 This project was developed using MySQL workbench, Attraction Data from arish Government,
-started in eclipes but to use java fxml scene builder i shifted on NetBeans. was having some jdk virsion issue i am now using jdk1.8.0_144
-
-NetBeans 8.1
+started in eclipes but to use java fxml scene builder i shifted on NetBeans. but had some issues with jdk virsion and netbeats compatibility and netbeans was crashing, 
+so i am now using eclipes and jdk virsion 1.8.0_144
+Worked in:
+NetBeans 8.1,8.2
 Oracle 8.1
 Mysql 8.017
 Jdbc 8.017
